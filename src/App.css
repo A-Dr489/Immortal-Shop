@@ -1,0 +1,53 @@
+:root {
+  --primary: #00ACC1;
+  --secondary: #FF7043;
+  --bg: #F4F9F9;
+  --text: #2E2E2E;
+}
+
+body {
+  margin: 0px;
+  background-color: var(--bg);
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+}
+
+.daddy-Nav {
+  height: 85px;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.headers {
+  font-size: 2em;
+  text-shadow: 0px 0px 2px var(--text);
+}
+
+.nav-btns-handle {
+  display: flex;
+  gap: 65px;
+}
+
+.nav-btns {
+  border: none;
+  background-color: var(--primary);
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--text);
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+
+.nav-btns:hover {
+  text-decoration: underline;
+  color: white;
+  scale: 1.1;
+}
+
+.nav-btns:active {
+  color: var(--text);
+  text-decoration: underline;
+  scale: 0.9;
+}
