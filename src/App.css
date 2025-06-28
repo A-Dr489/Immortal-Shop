@@ -27,7 +27,25 @@ body {
 
 .nav-btns-handle {
   display: flex;
-  gap: 65px;
+  gap: 45px;
+}
+
+.nav-cart {
+  border: none;
+  background-color: var(--primary);
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--text);
+  transition: ease 0.15s;
+  cursor: pointer;
+}
+
+.nav-cart:hover {
+  color: white;
+}
+
+.nav-cart:active {
+  color: var(--text);
 }
 
 .nav-btns {
@@ -47,7 +65,6 @@ body {
 }
 
 .nav-btns:active {
-  color: var(--text);
   text-decoration: underline;
   scale: 0.9;
 }

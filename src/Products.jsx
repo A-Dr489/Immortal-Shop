@@ -26,7 +26,7 @@ function Products() {
 
     return (
         <>
-          <div style={{ display: "flex", justifyContent: "center", border: "1px solid black"}}>
+          <div style={{ display: "flex", justifyContent: "center"}}>
             <div className="daddy-products">
                 {items.map((data) => {
                   return <ProductComp id={data.name} name={data.name} description={data.description} catagory={data.catagory} price={data.price}/>

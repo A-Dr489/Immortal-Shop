@@ -6,11 +6,16 @@ function ProductDes() {
     const location = useLocation();
     const [count, setCount] = useState(1);
     const { data } = location.state || {};
+    
 
     function handleCount(e) {
         if(e.target.value > 0) {
             setCount(e.target.value);
         }
+    }
+
+    function handleAdd() {
+        
     }
 
     if(!data) return <h1>Something is wrong with the data</h1>
@@ -27,7 +32,7 @@ function ProductDes() {
                     <input name='quantity' type='number' value={count} onChange={handleCount} style={{width: "60px", fontSize: "1.4em"}}/> <br/>
                     <h1>{data.price * count} $</h1>
                     <div style={{display: "flex", justifyContent: "center", marginTop: "50px"}}>
-                        <button className='add-cartbtn'>Add to Cart</button>
+                        <button className='add-cartbtn' onClick={handleAdd}>Add to Cart</button>
                     </div>
                 </div>
             </div>
