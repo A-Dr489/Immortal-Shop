@@ -20,6 +20,11 @@ const items = [{
   description: "Uniqe double minecraft sword the killed more than billion souls, and way more to come",
   catagory: "Minecraft",
   price: 11.99
+}, {
+  name: "Sword 3",
+  description: "Uniqe double minecraft sword the killed more than billion souls, and way more to come",
+  catagory: "Minecraft",
+  price: 6.99
 }];
 
 function Products() {

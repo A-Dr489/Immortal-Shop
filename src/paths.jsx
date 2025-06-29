@@ -3,6 +3,7 @@ import Home from './Home.jsx'
 import Products from './Products.jsx'
 import ProductDes from './ProductDes.jsx'
 import Cart from './Cart.jsx'
+import Secret from './Secret.jsx'
 
 const routes = [{
     path: '/',
@@ -26,6 +27,10 @@ const routes = [{
     {
         path: "Products/:id",
         element: <ProductDes />
+    },
+    {
+        path: "Secret",
+        element: <Secret />
     }
     ]
 },];

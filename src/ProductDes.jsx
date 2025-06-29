@@ -1,11 +1,13 @@
 import { useLocation } from 'react-router-dom';
 import './Products.css'
 import { useState } from 'react';
+import { useOutletContext } from "react-router-dom";
 
 function ProductDes() {
     const location = useLocation();
     const [count, setCount] = useState(1);
     const { data } = location.state || {};
+    const context = useOutletContext();
     
 
     function handleCount(e) {
@@ -15,7 +17,12 @@ function ProductDes() {
     }
 
     function handleAdd() {
-        
+        try {
+            context.setShop((prev) => [...prev, {id: crypto.randomUUID(), name: data.name, price: data.price, img: data.img, catagory: data.catagory, quantity: count}]);
+            window.alert(`${data.name} has been added to you shopping cart`);
+        } catch(e) {
+            window.alert("Something went wrong! " + e);
+        }
     }
 
     if(!data) return <h1>Something is wrong with the data</h1>
